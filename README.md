@@ -38,24 +38,28 @@ cat /proc/mdstat показывает, что в raid участвуют оба 
 1. Удаление диска
 ![1](https://user-images.githubusercontent.com/44519124/57975211-a9784980-79cd-11e9-89a7-e07fb071530f.png)
 ![2](https://user-images.githubusercontent.com/44519124/57975212-aa10e000-79cd-11e9-82d3-16e838a15fb9.png)
-
-
+---
 2. Добавление нового диска
 ![3](https://user-images.githubusercontent.com/44519124/57975237-d62c6100-79cd-11e9-9abe-e6904bc32dd4.png)
+---
 3. Просмотр результата
 ![4_1](https://user-images.githubusercontent.com/44519124/57975246-f2300280-79cd-11e9-8ee0-28bd40e7da72.png)
 ![4_2](https://user-images.githubusercontent.com/44519124/57975220-ad0bd080-79cd-11e9-82e6-1c699d480a28.png)
-
+---
 4. Копирование таблицы разделов на новый диск
 ![5_1](https://user-images.githubusercontent.com/44519124/57975332-67e89e00-79cf-11e9-8d5f-c2cec819046c.png)
 ![5_2](https://user-images.githubusercontent.com/44519124/57975222-af6e2a80-79cd-11e9-874f-80d4179d4737.png)
 ![5_3](https://user-images.githubusercontent.com/44519124/57975265-3e7b4280-79ce-11e9-9b3d-7884befe7395.png)
-
+---
 5. Добавление в RAID-массиы нового диска
 ![6](https://user-images.githubusercontent.com/44519124/57975268-5b177a80-79ce-11e9-84c3-17e5d6b7be0c.png)
 ![7](https://user-images.githubusercontent.com/44519124/57975273-73879500-79ce-11e9-9a4f-ccfa76e1999a.png)
+---
 6. Синхронизация разделов, не входящих в RAID
 ![8](https://user-images.githubusercontent.com/44519124/57975226-b39a4800-79cd-11e9-992f-f0f85dadbb15.png)
+---
 7. Установка grub и просмотр RAID-массива
 ![9](https://user-images.githubusercontent.com/44519124/57975280-9023cd00-79ce-11e9-9017-24942b4c0cad.png)
+---
+# Задание 3
 
