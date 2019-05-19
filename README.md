@@ -43,6 +43,7 @@ cat /proc/mdstat показывает, что в raid участвуют оба 
 ![3](https://user-images.githubusercontent.com/44519124/57975237-d62c6100-79cd-11e9-9abe-e6904bc32dd4.png)
 ---
 3. Просмотр результата
+![3_1](https://user-images.githubusercontent.com/44519124/57980785-2e984880-7a38-11e9-9275-8c7d79a666e5.png)
 ![4_1](https://user-images.githubusercontent.com/44519124/57975246-f2300280-79cd-11e9-8ee0-28bd40e7da72.png)
 ![4_2](https://user-images.githubusercontent.com/44519124/57975220-ad0bd080-79cd-11e9-82e6-1c699d480a28.png)
 ---
