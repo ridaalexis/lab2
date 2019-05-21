@@ -94,7 +94,7 @@ cat /proc/mdstat показывает, что в raid участвуют оба 
 ![10](https://user-images.githubusercontent.com/44519124/57985934-8904c980-7a77-11e9-8564-8e3cb3f49625.png)\
 Команда mdadm работает с ключом --force\
 Добавился RAID-массив md63 с одним диском\
-![11](https://user-images.githubusercontent.com/44519124/57989127-04c63c80-7a9f-11e9-97c1-8a98118db306.png)
+![11](https://user-images.githubusercontent.com/44519124/57989127-04c63c80-7a9f-11e9-97c1-8a98118db306.png)\
 Отображается в дереве lsblk новый RAID-массив на диске sdb\
 ![12](https://user-images.githubusercontent.com/44519124/57985938-8b672380-7a77-11e9-8f16-cfb19f3e0caa.png)\
 В выводе команды pvs появился второй RAID.
