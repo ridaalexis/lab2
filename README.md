@@ -76,19 +76,19 @@ cat /proc/mdstat показывает, что в raid участвуют оба 
 ![4_2](https://user-images.githubusercontent.com/44519124/57985924-82765200-7a77-11e9-9f90-d2c533c12304.png)
 ![5](https://user-images.githubusercontent.com/44519124/57985926-830ee880-7a77-11e9-87fe-8d1102e2410e.png)
 ---
-3. 1. Копирование файловой таблицы со старого диска на новый. 
-![6_1](https://user-images.githubusercontent.com/44519124/57985927-84401580-7a77-11e9-83c2-d3ce7c5a554f.png)
-    
-![6_2](https://user-images.githubusercontent.com/44519124/57985928-84d8ac00-7a77-11e9-9317-121de4e790c0.png)
-    2. После выполнения команды sfdisk на новом диске (sdb) появились разделы sdb1 и sdb2.
+3.  Копирование файловой таблицы со старого диска на новый. 
+![6_1](https://user-images.githubusercontent.com/44519124/57985927-84401580-7a77-11e9-83c2-d3ce7c5a554f.png)    
+![6_2](https://user-images.githubusercontent.com/44519124/57985928-84d8ac00-7a77-11e9-9317-121de4e790c0.png)\
+После выполнения команды sfdisk на новом диске (sdb) появились разделы sdb1 и sdb2.
 ![7](https://user-images.githubusercontent.com/44519124/57985930-8609d900-7a77-11e9-9e03-bc4e660b49ba.png)
 ---
 4. Скопировали данные /boot с sda1 на sdb1
 ---
 5. Перемонтировали /boot на новый диск (sdb) и установили grub
 ![8](https://user-images.githubusercontent.com/44519124/57989029-d5fb9680-7a9d-11e9-8e75-b5552d923cd3.png)
-![9](https://user-images.githubusercontent.com/44519124/57985933-87d39c80-7a77-11e9-93eb-4d2859971579.png)
-Мы выполнили команду grub-install /dev/sdb, чтобы установить загрузчик группы на новый диск.
+![9](https://user-images.githubusercontent.com/44519124/57985933-87d39c80-7a77-11e9-93eb-4d2859971579.png)\
+Мы выполнили команду grub-install /dev/sdb, чтобы установить загрузчик группы на новый диск.\
+
 ---
 6. Создаем новый RAID-массив с включением только одного диска sdb\
 ![10](https://user-images.githubusercontent.com/44519124/57985934-8904c980-7a77-11e9-8564-8e3cb3f49625.png)
@@ -188,8 +188,3 @@ LV var, log, root находятся на старом диске (md0)\
 ![46](https://user-images.githubusercontent.com/44519124/57988897-3093f300-7a9c-11e9-8e70-85ff3764e07c.png)
 ![47_1](https://user-images.githubusercontent.com/44519124/57988898-31c52000-7a9c-11e9-9094-ef4ae25769e9.png)
 ![47_2](https://user-images.githubusercontent.com/44519124/57988899-32f64d00-7a9c-11e9-90f3-d68bbb196cbd.png)
-
-
-
-
-
