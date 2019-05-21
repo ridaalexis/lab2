@@ -91,7 +91,7 @@ cat /proc/mdstat показывает, что в raid участвуют оба 
 
 ---
 6. Создаем новый RAID-массив с включением только одного диска sdb\
-![10](https://user-images.githubusercontent.com/44519124/57985934-8904c980-7a77-11e9-8564-8e3cb3f49625.png)
+![10](https://user-images.githubusercontent.com/44519124/57985934-8904c980-7a77-11e9-8564-8e3cb3f49625.png)\
 Команда mdadm работает с ключом --force\
 Добавился RAID-массив md63 с одним диском\
 ![11](https://user-images.githubusercontent.com/44519124/57989127-04c63c80-7a9f-11e9-97c1-8a98118db306.png)
@@ -119,7 +119,7 @@ LV var, log, root находятся на старом диске (md0)\
 ![18_4](https://user-images.githubusercontent.com/44519124/57985958-96ba4f00-7a77-11e9-8b38-01a3dd1fac24.png)\
 После команды pvs видно, что для нового массива появился физический том. LV var, log, root находятся на новом диске.\
 ![19_1](https://user-images.githubusercontent.com/44519124/57985960-991ca900-7a77-11e9-9c36-b457a65f8258.png)
-![19_2](https://user-images.githubusercontent.com/44519124/57985961-9a4dd600-7a77-11e9-8d71-323c9373a8b2.png)\
+![19_2](https://user-images.githubusercontent.com/44519124/57985961-9a4dd600-7a77-11e9-8d71-323c9373a8b2.png)
 ---
 10. Удаление старого диска из RAID-массива.
 ![20](https://user-images.githubusercontent.com/44519124/57985962-9ae66c80-7a77-11e9-8fcc-06d2226119d3.png)
