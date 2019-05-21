@@ -78,7 +78,11 @@ cat /proc/mdstat показывает, что в raid участвуют оба 
 ![5](https://user-images.githubusercontent.com/44519124/57985926-830ee880-7a77-11e9-87fe-8d1102e2410e.png)
 ---
 3.  Копирование файловой таблицы со старого диска на новый. 
+<<<<<<< HEAD
 ![6_1](https://user-images.githubusercontent.com/44519124/57985927-84401580-7a77-11e9-83c2-d3ce7c5a554f.png)
+=======
+![6_1](https://user-images.githubusercontent.com/44519124/57985927-84401580-7a77-11e9-83c2-d3ce7c5a554f.png)    
+>>>>>>> aa10badfe32eb1d587792058edfc066d85e5bfc8
 ![6_2](https://user-images.githubusercontent.com/44519124/57985928-84d8ac00-7a77-11e9-9317-121de4e790c0.png)\
 После выполнения команды sfdisk на новом диске (sdb) появились разделы sdb1 и sdb2.
 ![7](https://user-images.githubusercontent.com/44519124/57985930-8609d900-7a77-11e9-9e03-bc4e660b49ba.png)
@@ -88,6 +92,7 @@ cat /proc/mdstat показывает, что в raid участвуют оба 
 5. Перемонтировали /boot на новый диск (sdb) и установили grub
 ![8](https://user-images.githubusercontent.com/44519124/57989029-d5fb9680-7a9d-11e9-8e75-b5552d923cd3.png)
 ![9](https://user-images.githubusercontent.com/44519124/57985933-87d39c80-7a77-11e9-93eb-4d2859971579.png)\
+<<<<<<< HEAD
 Мы выполнили команду grub-install /dev/sdb, чтобы установить загрузчик группы на новый диск.
 ---
 6. Создаем новый RAID-массив с включением только одного диска sdb
@@ -96,6 +101,17 @@ cat /proc/mdstat показывает, что в raid участвуют оба 
 Добавился RAID-массив md63 с одним диском \
 ![11](https://user-images.githubusercontent.com/44519124/57989127-04c63c80-7a9f-11e9-97c1-8a98118db306.png)\
 Отображается в дереве lsblk новый RAID-массив на диске sdb \
+=======
+Мы выполнили команду grub-install /dev/sdb, чтобы установить загрузчик группы на новый диск.\
+
+---
+6. Создаем новый RAID-массив с включением только одного диска sdb\
+![10](https://user-images.githubusercontent.com/44519124/57985934-8904c980-7a77-11e9-8564-8e3cb3f49625.png)\
+Команда mdadm работает с ключом --force\
+Добавился RAID-массив md63 с одним диском\
+![11](https://user-images.githubusercontent.com/44519124/57989127-04c63c80-7a9f-11e9-97c1-8a98118db306.png)\
+Отображается в дереве lsblk новый RAID-массив на диске sdb\
+>>>>>>> aa10badfe32eb1d587792058edfc066d85e5bfc8
 ![12](https://user-images.githubusercontent.com/44519124/57985938-8b672380-7a77-11e9-8f16-cfb19f3e0caa.png)\
 В выводе команды pvs появился второй RAID. \
 ![13](https://user-images.githubusercontent.com/44519124/57985939-8b672380-7a77-11e9-80e7-cd55a054b04e.png)
