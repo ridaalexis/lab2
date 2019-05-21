@@ -1,36 +1,37 @@
 # Задание 1
 
+1. Установка
 ![1](https://user-images.githubusercontent.com/44519124/57974776-5949b900-79c6-11e9-9fe2-6673d617d0af.png)
 ![2](https://user-images.githubusercontent.com/44519124/57974780-6e264c80-79c6-11e9-8e34-281cbdbf3bbc.png)
 ![3](https://user-images.githubusercontent.com/44519124/57974781-6f577980-79c6-11e9-8ff2-34ec5c9de8fe.png)
-
-1. Настройка RAID
+---
+2. Настройка RAID
 ![4](https://user-images.githubusercontent.com/44519124/57974782-7088a680-79c6-11e9-8107-f35ef494cb18.png)
 ---
-2. Настройка LVM
+3. Настройка LVM
 ![5](https://user-images.githubusercontent.com/44519124/57974783-71b9d380-79c6-11e9-9ded-eb73ca79e5e5.png)
 ![6](https://user-images.githubusercontent.com/44519124/57974784-72eb0080-79c6-11e9-9417-eba2770152fc.png)
 ![7](https://user-images.githubusercontent.com/44519124/57974786-74b4c400-79c6-11e9-9836-d2e47a875b55.png)
 ![8](https://user-images.githubusercontent.com/44519124/57974787-75e5f100-79c6-11e9-9e45-d8a7270e37f2.png)
 ---
-3. Клонирование содержимого раздела boot с ssd1 на ssd2
+4. Клонирование содержимого раздела boot с ssd1 на ssd2
 ![9](https://user-images.githubusercontent.com/44519124/57974862-1b4d9480-79c8-11e9-8140-a66b960060e0.png)
 ---
-4. Вывод fdisk -l
+5. Вывод fdisk -l
 ![10_1](https://user-images.githubusercontent.com/44519124/57974790-77afb480-79c6-11e9-8b1b-bda80db9cb10.png)
 ![10_2](https://user-images.githubusercontent.com/44519124/57974792-7a120e80-79c6-11e9-84d1-15cfcd8bf3e7.png)
 ---
-5. Вывод lsblk -o NAME,SIZE,FSTYPE,TYPE,MOUNTPOINT
+6. Вывод lsblk -o NAME,SIZE,FSTYPE,TYPE,MOUNTPOINT
 ![11](https://user-images.githubusercontent.com/44519124/57974908-acbd0680-79c8-11e9-96fe-403b3c3c49fe.png)
 ---
-6. Установка grub на ssd2 и информация о текущем RAID. 
+7. Установка grub на ssd2 и информация о текущем RAID. 
 cat /proc/mdstat показывает, что в raid участвуют оба диска.
 ![12](https://user-images.githubusercontent.com/44519124/57974913-d24a1000-79c8-11e9-8091-c3cfe46b76c0.png)
 ---
-7. Вывод команд pvs, lvs, vgs
+8. Вывод команд pvs, lvs, vgs
 ![13](https://user-images.githubusercontent.com/44519124/57974948-5603fc80-79c9-11e9-9098-08f55b5149c3.png)
 ---
-8. Вывод команды vgs
+9. Вывод команды vgs
 ![14_1](https://user-images.githubusercontent.com/44519124/57974798-7ed6c280-79c6-11e9-852b-732fe842f4ec.png)
 ![14_2](https://user-images.githubusercontent.com/44519124/57974799-8007ef80-79c6-11e9-996e-eabfed0fd3af.png)
 ---
@@ -76,28 +77,27 @@ cat /proc/mdstat показывает, что в raid участвуют оба 
 ![4_2](https://user-images.githubusercontent.com/44519124/57985924-82765200-7a77-11e9-9f90-d2c533c12304.png)
 ![5](https://user-images.githubusercontent.com/44519124/57985926-830ee880-7a77-11e9-87fe-8d1102e2410e.png)
 ---
-3. 1. Копирование файловой таблицы со старого диска на новый. 
+3.  Копирование файловой таблицы со старого диска на новый. 
 ![6_1](https://user-images.githubusercontent.com/44519124/57985927-84401580-7a77-11e9-83c2-d3ce7c5a554f.png)
-    
-![6_2](https://user-images.githubusercontent.com/44519124/57985928-84d8ac00-7a77-11e9-9317-121de4e790c0.png)
-    2. После выполнения команды sfdisk на новом диске (sdb) появились разделы sdb1 и sdb2.
+![6_2](https://user-images.githubusercontent.com/44519124/57985928-84d8ac00-7a77-11e9-9317-121de4e790c0.png)\
+После выполнения команды sfdisk на новом диске (sdb) появились разделы sdb1 и sdb2.
 ![7](https://user-images.githubusercontent.com/44519124/57985930-8609d900-7a77-11e9-9e03-bc4e660b49ba.png)
 ---
 4. Скопировали данные /boot с sda1 на sdb1
 ---
 5. Перемонтировали /boot на новый диск (sdb) и установили grub
 ![8](https://user-images.githubusercontent.com/44519124/57989029-d5fb9680-7a9d-11e9-8e75-b5552d923cd3.png)
-![9](https://user-images.githubusercontent.com/44519124/57985933-87d39c80-7a77-11e9-93eb-4d2859971579.png)
+![9](https://user-images.githubusercontent.com/44519124/57985933-87d39c80-7a77-11e9-93eb-4d2859971579.png)\
 Мы выполнили команду grub-install /dev/sdb, чтобы установить загрузчик группы на новый диск.
 ---
-6. Создаем новый RAID-массив с включением только одного диска sdb\
-![10](https://user-images.githubusercontent.com/44519124/57985934-8904c980-7a77-11e9-8564-8e3cb3f49625.png)
-Команда mdadm работает с ключом --force\
-Добавился RAID-массив md63 с одним диском\
-![11](https://user-images.githubusercontent.com/44519124/57989127-04c63c80-7a9f-11e9-97c1-8a98118db306.png)
-Отображается в дереве lsblk новый RAID-массив на диске sdb\
+6. Создаем новый RAID-массив с включением только одного диска sdb
+![10](https://user-images.githubusercontent.com/44519124/57985934-8904c980-7a77-11e9-8564-8e3cb3f49625.png)\
+Команда mdadm работает с ключом --force \
+Добавился RAID-массив md63 с одним диском \
+![11](https://user-images.githubusercontent.com/44519124/57989127-04c63c80-7a9f-11e9-97c1-8a98118db306.png)\
+Отображается в дереве lsblk новый RAID-массив на диске sdb \
 ![12](https://user-images.githubusercontent.com/44519124/57985938-8b672380-7a77-11e9-8f16-cfb19f3e0caa.png)\
-В выводе команды pvs появился второй RAID.
+В выводе команды pvs появился второй RAID. \
 ![13](https://user-images.githubusercontent.com/44519124/57985939-8b672380-7a77-11e9-80e7-cd55a054b04e.png)
 ---
 7. Увеличиваем размер Volume Group
@@ -105,21 +105,21 @@ cat /proc/mdstat показывает, что в raid участвуют оба 
 ![14_2](https://user-images.githubusercontent.com/44519124/57985943-8d30e700-7a77-11e9-87e2-5f5899238945.png)
 ![14_3](https://user-images.githubusercontent.com/44519124/57985944-8e621400-7a77-11e9-8b54-62d1d4ab36a8.png)
 ![14_4](https://user-images.githubusercontent.com/44519124/57985947-8efaaa80-7a77-11e9-97ed-9229585bfec2.png)\
-LV var, log, root находятся на старом диске (md0)\
+LV var, log, root находятся на старом диске (md0) \
 ![15](https://user-images.githubusercontent.com/44519124/57985949-902bd780-7a77-11e9-9144-88d5c48b119f.png)
 ![16](https://user-images.githubusercontent.com/44519124/57985950-90c46e00-7a77-11e9-9956-ee0fd6fd3996.png)
 ---
-8. Перемещение данных со старого диска на новый.\
+8. Перемещение данных со старого диска на новый.
 ![17](https://user-images.githubusercontent.com/44519124/57985952-91f59b00-7a77-11e9-89f0-ff47e319b03a.png)
 ---
 9. Просмотр изменений \
 ![18_1](https://user-images.githubusercontent.com/44519124/57985953-9326c800-7a77-11e9-83af-9480343e093e.png)
 ![18_2](https://user-images.githubusercontent.com/44519124/57985955-9457f500-7a77-11e9-9070-a74e0334e5eb.png)
 ![18_3](https://user-images.githubusercontent.com/44519124/57985956-94f08b80-7a77-11e9-949e-956b239e3919.png)
-![18_4](https://user-images.githubusercontent.com/44519124/57985958-96ba4f00-7a77-11e9-8b38-01a3dd1fac24.png)\
-После команды pvs видно, что для нового массива появился физический том. LV var, log, root находятся на новом диске.\
+![18_4](https://user-images.githubusercontent.com/44519124/57985958-96ba4f00-7a77-11e9-8b38-01a3dd1fac24.png) \
+После команды pvs видно, что для нового массива появился физический том. LV var, log, root находятся на новом диске. \
 ![19_1](https://user-images.githubusercontent.com/44519124/57985960-991ca900-7a77-11e9-9c36-b457a65f8258.png)
-![19_2](https://user-images.githubusercontent.com/44519124/57985961-9a4dd600-7a77-11e9-8d71-323c9373a8b2.png)\
+![19_2](https://user-images.githubusercontent.com/44519124/57985961-9a4dd600-7a77-11e9-8d71-323c9373a8b2.png)
 ---
 10. Удаление старого диска из RAID-массива.
 ![20](https://user-images.githubusercontent.com/44519124/57985962-9ae66c80-7a77-11e9-8fcc-06d2226119d3.png)
@@ -188,8 +188,3 @@ LV var, log, root находятся на старом диске (md0)\
 ![46](https://user-images.githubusercontent.com/44519124/57988897-3093f300-7a9c-11e9-8e70-85ff3764e07c.png)
 ![47_1](https://user-images.githubusercontent.com/44519124/57988898-31c52000-7a9c-11e9-9094-ef4ae25769e9.png)
 ![47_2](https://user-images.githubusercontent.com/44519124/57988899-32f64d00-7a9c-11e9-90f3-d68bbb196cbd.png)
-
-
-
-
-
